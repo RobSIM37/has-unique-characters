@@ -4,9 +4,9 @@ function hasUniqueChars(word) {
     let unique = true;
     let checkIndex = 0;
 
-    while (unique && checkIndex < charcters.length) {
+    while (unique && checkIndex < charcters.length - 1) {
 
-        if (charcters.slice(checkIndex + 1,charcters.length).includes(charcters[checkIndex])) {
+        if (charcters.slice(checkIndex + 1, charcters.length).includes(charcters[checkIndex])) {
             unique = false;
         }
 
@@ -26,3 +26,5 @@ console.log(hasUniqueChars("Moonday"))
 
 console.log(hasUniqueChars("Bob"))
 // returns true
+
+console.log(hasUniqueChars("Waterloo"))
